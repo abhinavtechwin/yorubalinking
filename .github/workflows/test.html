@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        window.onload = function() {
+            const currentURL = window.location.href;
+            const urlParts = currentURL.split('/');
+            const word_Id = urlParts[urlParts.length - 1];
+            const intentURL = intent://com.yoruba/word/${word_Id}#Intent;scheme=https;package=com.yoruba;end;
+            window.location.href = intentURL;
+        };
+    </script>
+</head>
+<body>
+    <p>If you are not redirected, <a id="redirectLink" href="#">click here</a>.</p>
+    <script>
+        // Update the link with the constructed Intent URL after the page loads
+        window.onload = function() {
+            const currentURL = window.location.href;
+            const urlParts = currentURL.split('/');
+            const word_Id = urlParts[urlParts.length - 1];
+            const intentURL = intent://com.yoruba/word/${word_Id}#Intent;scheme=https;package=com.yoruba;end;
+            window.location.href = intentURL;
+            document.getElementById('redirectLink').href = intentURL;
+        };
+    </script>
+</body>
+</html>
