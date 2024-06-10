@@ -40,11 +40,14 @@
     <script>
         window.onload = function() {
             // Redirect to the deep link immediately
-            window.location.href = "intent://com.yoruba#Intent;scheme=https;package=com.yoruba;end";
+            window.location.href = `intent://com.yoruba#Intent;scheme=https;package=com.yoruba;S.wordId=${wordId};S.name=${name};end`;
+
+            // window.location.href = "intent://com.yoruba#Intent;scheme=https;package=com.yoruba;end";
         };
     </script>
 </head>
 <body>
-    <p>If you are not redirected, <a href="intent://com.yoruba#Intent;scheme=https;package=com.yoruba;end">click here</a>.</p>
+   <p>If you are not redirected, <a href="intent://com.yoruba#Intent;scheme=https;package=com.yoruba;S.wordId=123;S.name=John;end">click here</a>.</p>
+<!--     <p>If you are not redirected, <a href="intent://com.yoruba#Intent;scheme=https;package=com.yoruba;end">click here</a>.</p> -->
 </body>
 </html>
