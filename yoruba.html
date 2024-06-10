@@ -8,7 +8,9 @@
             const currentURL = window.location.href;
             const urlParts = currentURL.split('/');
             const word_Id = urlParts[urlParts.length - 1];
-            const intentURL = `intent://com.yoruba/`
+             // const intentURL = `intent://com.yoruba/word/${word_Id}#Intent;scheme=https;package=com.yoruba;end;`
+            const intentURL = `intent://com.yoruba/word/#Intent;scheme=https;package=com.yoruba;end`;
+
             window.location.href = intentURL;
         };
     </script>
@@ -21,7 +23,9 @@
             const currentURL = window.location.href;
             const urlParts = currentURL.split('/');
             const word_Id = urlParts[urlParts.length - 1];
-            const intentURL = `intent://com.yoruba/`
+            // const intentURL = `intent://com.yoruba/word/${word_Id}#Intent;scheme=https;package=com.yoruba;end;`
+            const intentURL = `intent://com.yoruba/word/#Intent;scheme=https;package=com.yoruba;end`;
+
             window.location.href = intentURL;
             document.getElementById('redirectLink').href = intentURL;
         };
